@@ -1,8 +1,10 @@
 {
-    "name": "socketio test"
+    "name": "application-name"
   , "version": "0.0.1"
   , "private": true
   , "dependencies": {
-     "socket.io": ">= 0.8"
+      "express": "2.4.3"
+    , "jade": ">= 0.0.1"
+    , "socket.io": ">= 0.8"
   }
 }
