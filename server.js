@@ -11,7 +11,6 @@ function handler (req, res) {
       res.writeHead(500);
       return res.end('Error loading index.html');
     }
-
     res.writeHead(200);
     res.end(data);
   });
@@ -24,8 +23,4 @@ io.sockets.on('connection', function (socket) {
         console.log(data);
         socket.broadcast.emit('xx', { send: 'send' });
     });
-//    var interval = setInterval(function() {
-//        socket.emit('news', { data:'aaaa' });
-//    },1000);
-
 });
