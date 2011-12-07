@@ -1,5 +1,5 @@
 var app = require('http').createServer(handler)
-  , io = require('socket.io').listen(app)
+//  , io = require('socket.io').listen(app)
   , fs = require('fs');
 
 app.listen(8080);
@@ -15,12 +15,12 @@ function handler (req, res) {
     res.end(data);
   });
 }
-
-io.sockets.on('connection', function (socket) {
-    console.log('connection open');
-    socket.emit('news', { hello: 'world' });
-    socket.on('my other event', function (data) {
-        console.log(data);
-        socket.broadcast.emit('xx', { send: 'send' });
-    });
-});
+//
+//io.sockets.on('connection', function (socket) {
+//    console.log('connection open');
+//    socket.emit('news', { hello: 'world' });
+//    socket.on('my other event', function (data) {
+//        console.log(data);
+//        socket.broadcast.emit('xx', { send: 'send' });
+//    });
+//});
